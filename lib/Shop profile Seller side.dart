@@ -809,5 +809,4 @@ class _ShopProfilePageState
     super.dispose();
 
   }
-
 }
