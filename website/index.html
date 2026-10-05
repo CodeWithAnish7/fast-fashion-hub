@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KapNiva — Aapke Shehar Ki Dukaan, Aapke Ghar Pe.</title>
+  <meta name="description" content="KapNiva is a local fashion marketplace connecting customers with clothing stores in their city.">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Inter, Arial, sans-serif;
+      color: #171717;
+      background: #f8f8f8;
+      line-height: 1.6;
+    }
+    .nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(248,248,248,.94);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #dedede;
+    }
+    .nav-inner {
+      max-width: 1120px; margin: auto; padding: 16px 22px;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .brand { font-size: 27px; font-weight: 800; letter-spacing: -.7px; color: #ff9800; }
+    .nav a { color: #171717; text-decoration: none; margin-left: 22px; font-size: 14px; }
+    .hero {
+      max-width: 1120px; margin: auto; padding: 90px 22px 80px;
+      display: grid; grid-template-columns: 1.15fr .85fr; gap: 50px; align-items: center;
+    }
+    .eyebrow { color: #ff9800; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 16px; }
+    h1 { font-size: clamp(44px, 7vw, 76px); line-height: .98; letter-spacing: -3px; margin-bottom: 24px; }
+    .tagline { font-size: 23px; font-weight: 600; margin-bottom: 18px; }
+    .hero p { max-width: 620px; color: #555; font-size: 17px; }
+    .notice {
+      margin-top: 28px; padding: 18px 20px; border: 1px solid #ead7c9;
+      border-left: 4px solid #ff9800; border-radius: 14px; background: white; font-size: 15px;
+    }
+    .visual {
+      min-height: 380px; border-radius: 28px; background: linear-gradient(135deg, #111111, #2d2d2d); color: white;
+      display: flex; flex-direction: column; justify-content: center; padding: 42px;
+    }
+    .visual .big { color: #ff9800; font-size: 52px; font-weight: 800; line-height: 1; margin-bottom: 18px; }
+    .visual p { color: #ddd; }
+    section { max-width: 1120px; margin: auto; padding: 75px 22px; }
+    .section-title { font-size: 38px; color: #111111; letter-spacing: -1.5px; margin-bottom: 14px; }
+    .section-intro { color: #666; max-width: 720px; margin-bottom: 35px; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .card {
+      background: white; border: 1px solid #e4e4e4; border-radius: 18px; padding: 26px;
+    }
+    .card h3 { margin-bottom: 8px; font-size: 20px; color: #4A2E20; }
+    .card p { color: #666; font-size: 15px; }
+    .download {
+      background: linear-gradient(135deg, #111111 0%, #2d2d2d 70%, #4A2E20 100%); color: white; border-radius: 26px;
+      padding: 55px 42px; text-align: center;
+    }
+    .download h2 { color: white; font-size: 42px; letter-spacing: -1.5px; margin-bottom: 12px; }
+    .download p { color: #d7d7d7; max-width: 680px; margin: 0 auto 24px; }
+    .button {
+      display: inline-block; background: #ff9800; color: #111111;
+      text-decoration: none; padding: 13px 23px; border-radius: 10px; font-weight: 700; transition: transform .2s ease, background .2s ease;
+    }
+    .button:hover { background: #ffad33; transform: translateY(-2px); }
+    .contact { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; }
+    .contact-box { background: white; border: 1px solid #e6e6e6; border-radius: 18px; padding: 28px; }
+    footer {
+      border-top: 1px solid #dedede; padding: 28px 22px;
+      text-align: center; color: #777; font-size: 13px;
+    }
+    @media (max-width: 800px) {
+      .hero, .contact { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr; }
+      .hero { padding-top: 60px; }
+      .nav a { display: none; }
+      h1 { letter-spacing: -2px; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand">Kap<span style="color:#111111">Niva</span></div>
+      <div>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#download">App</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Local Fashion Marketplace</div>
+        <h1>KapNiva</h1>
+        <div class="tagline">Aapke Shehar Ki Dukaan, Aapke Ghar Pe.</div>
+        <p>
+          KapNiva is a local fashion marketplace designed to connect customers
+          with clothing stores in their city, making local fashion easier to discover
+          and shop.
+        </p>
+        <div class="notice">
+          <strong>Mobile App:</strong> The KapNiva shopping experience is currently
+          available through the mobile application.
+        </div>
+      </div>
+      <div class="visual">
+        <div class="big">LOCAL<br>FASHION.</div>
+        <p>Discover clothing from local stores and bring your city's fashion closer to home.</p>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">About KapNiva</h2>
+      <p class="section-intro">
+        KapNiva is being built around a simple idea: local clothing shops should
+        be easier for nearby customers to discover and shop from.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <h3>Local Stores</h3>
+          <p>Discover clothing from participating local fashion stores in your city.</p>
+        </div>
+        <div class="card">
+          <h3>Easy Discovery</h3>
+          <p>Explore local fashion products through one simple mobile shopping experience.</p>
+        </div>
+        <div class="card">
+          <h3>Closer Shopping</h3>
+          <p>KapNiva focuses on connecting nearby customers with their local clothing market.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2 class="section-title">The KapNiva Experience</h2>
+      <p class="section-intro">
+        KapNiva is focused on a mobile-first experience for customers and local sellers.
+      </p>
+      <div class="grid">
+        <div class="card">
+          <h3>Browse</h3>
+          <p>Explore fashion products from local participating stores.</p>
+        </div>
+        <div class="card">
+          <h3>Choose</h3>
+          <p>Find products that match your style and shopping needs.</p>
+        </div>
+        <div class="card">
+          <h3>Order</h3>
+          <p>Use the KapNiva mobile app for the available shopping and ordering experience.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="download">
+      <div class="download">
+        <h2>Download the KapNiva App</h2>
+        <p>
+          For the complete KapNiva shopping experience, use our mobile application.
+          The website is currently an informational page.
+        </p>
+        <a class="button" href="#" onclick="return false;">App Coming Soon</a>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <div class="contact">
+        <div class="contact-box">
+          <h3>KapNiva</h3>
+          <p>Local Fashion Marketplace</p>
+          <p>Aapke Shehar Ki Dukaan, Aapke Ghar Pe.</p>
+        </div>
+        <div class="contact-box">
+          <h3>Information</h3>
+          <p>This website provides information about KapNiva and its mobile application.</p>
+          <p style="margin-top:10px;">For support and business enquiries, please use the contact details provided through the official KapNiva channels.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 KapNiva. All rights reserved.
+  </footer>
+</body>
+</html>
